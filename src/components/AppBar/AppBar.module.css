@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #2a363b;
+}
+
+ .link {
+     text-decoration: none;
+     color: black;
+     font-weight: 700;
+ }
+
+ .active {
+     color: orange;
+     text-decoration: underline;
+ }
