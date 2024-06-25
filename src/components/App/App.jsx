@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { selectIsRefreshing } from "../../redux/auth/selectors";
 import RestrictedRoute from "../RestrictedRoute";
 import PrivateRoute from "../PrivateRoute";
+import css from "./App.module.css";
 
 const HomePage = lazy(() => import("../../pages/HomePage"));
 const LoginPage = lazy(() => import("../../pages/LoginPage"));
@@ -28,6 +29,7 @@ export default function App() {
     } 
 
     return ( 
+        <div className={css.appContainer}>
         <Layout>
             <Suspense fallback={<div>Loading page...</div>}>
             <Routes>
@@ -37,7 +39,8 @@ export default function App() {
             <Route path="/register" element={<RestrictedRoute component={<RegistrationPage/>}/>} />
             </Routes>   
             </Suspense>
-        </Layout>
+            </Layout>
+            </div>
         
 )
 };
